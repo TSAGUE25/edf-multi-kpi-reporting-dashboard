@@ -1,4 +1,4 @@
-# Reporting Multi-KPIs — Tableau de Bord Opérationnel
+﻿# Reporting Multi-KPIs — Tableau de Bord Opérationnel
 
 > **Piloter la performance opérationnelle par les indicateurs dans un contexte énergie/industrie**
 
@@ -114,9 +114,9 @@ Connexion API temps réel. Dashboard Power BI interactif. Alertes email/Slack.
 
 ---
 
-## Auteur
+## Contributors
 
-**Emmanuel TSAGUE** — Data Scientist / Data Analyst
+**TSAGUE Emmanuel** — Data Scientist / Data Analyst
 Domaine : Business Intelligence · Performance opérationnelle · Reporting
 GitHub : [TSAGUE25](https://github.com/TSAGUE25)
 
