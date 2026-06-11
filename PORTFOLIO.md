@@ -1,7 +1,7 @@
 # CAS D'USAGE 5 — Reporting Multi-KPIs
 ## Piloter la performance opérationnelle par les indicateurs dans un contexte énergie / industrie
 
-> **Auteur :** Emmanuel TSAGUE — Data Scientist / Data Analyst  
+> **Auteur :** TSAGUE EMMANUEL — Data Scientist / Data Analyst  
 > **Domaine :** Business Intelligence, Performance opérationnelle, Pilotage  
 > **Repository GitHub :** `multi-kpi-reporting-dashboard`  
 > **Statut :** Portfolio — données simulées — cas générique et anonymisé  
@@ -10,7 +10,6 @@
 > **Important :** Ce cas est entièrement générique et anonymisé. Il ne repose sur aucune donnée confidentielle, aucun système interne et aucune information propriétaire d'une organisation réelle.
 
 ---
-
 ## 1. TITRE ET RÉSUMÉ EXÉCUTIF
 
 **"Reporting multi-KPIs pour piloter la performance opérationnelle — Du tableau de bord Excel manuel au dashboard Power BI automatisé"**
@@ -22,7 +21,6 @@ Un manager opérationnel supervise des activités dispersées : délais de trait
 **Résultats hypothétiques :** 15 KPI consolidés automatiquement, reporting mensuel réduit de 6 heures à 20 minutes, 3 alertes critiques identifiées.
 
 ---
-
 ## 2. CONTEXTE MÉTIER
 
 Dans toute organisation industrielle ou énergétique, le pilotage opérationnel repose sur des indicateurs qui mesurent la performance de l'activité quotidienne :
@@ -45,7 +43,6 @@ Dans toute organisation industrielle ou énergétique, le pilotage opérationnel
 > **MTTR (Mean Time To Repair) :** durée moyenne de réparation après une panne. Plus le MTTR est bas, plus la maintenance est réactive.
 
 ---
-
 ## 3. POURQUOI CE SUJET EXISTE
 
 | Raison | Symptôme sans pilotage |
@@ -58,7 +55,6 @@ Dans toute organisation industrielle ou énergétique, le pilotage opérationnel
 | Alertes absentes | Les dérives passent inaperçues jusqu'à ce qu'elles deviennent critiques |
 
 ---
-
 ## 4. PROBLÈME MÉTIER
 
 > "Mon reporting mensuel dure 6 heures. Je copie-colle des données de 8 fichiers Excel différents. Et malgré ça, j'ai des incohérences entre les chiffres de mes équipes."
@@ -72,7 +68,6 @@ Dans toute organisation industrielle ou énergétique, le pilotage opérationnel
 6. Maintenir le système dans le temps
 
 ---
-
 ## 5. OBJECTIFS DU PROJET
 
 | Objectif | Description | Livrable |
@@ -85,7 +80,6 @@ Dans toute organisation industrielle ou énergétique, le pilotage opérationnel
 | Documenter | Guide de mise à jour mensuelle | `README_usage.md` |
 
 ---
-
 ## 6. DONNÉES UTILISÉES
 
 > **Données entièrement simulées — cas générique.**
@@ -118,7 +112,6 @@ Dans toute organisation industrielle ou énergétique, le pilotage opérationnel
 | `satisfaction_score` | Entier | Score 1-5 si évaluation |
 
 ---
-
 ## 7. PRÉPARATION DES DONNÉES
 
 ```python
@@ -176,7 +169,6 @@ df_tickets.to_csv("data_sample/tickets.csv", index=False)
 ```
 
 ---
-
 ## 8. MÉTHODES ET OUTILS
 
 ### A. Calcul automatique des KPI
@@ -312,7 +304,6 @@ for nom, df in tables_export.items():
 ```
 
 ---
-
 ## 9. DÉMARCHE ÉTAPE PAR ÉTAPE
 
 ```
@@ -328,7 +319,6 @@ for nom, df in tables_export.items():
 ```
 
 ---
-
 ## 10. MÉTRIQUES
 
 | KPI | Définition précise | Seuil vert | Seuil rouge |
@@ -342,7 +332,6 @@ for nom, df in tables_export.items():
 | Taux premier contact | % résolu sans réouverture | > 75 % | < 60 % |
 
 ---
-
 ## 11. RÉSULTATS SIMULÉS
 
 | KPI | Valeur simulée | Tendance | Alerte |
@@ -355,7 +344,6 @@ for nom, df in tables_export.items():
 | Satisfaction | 78,5 % | Stable | — |
 
 ---
-
 ## 12. VALEUR MÉTIER
 
 | Valeur | Avant | Après |
@@ -367,7 +355,6 @@ for nom, df in tables_export.items():
 | Communication | Réunion mensuelle avec tableaux statiques | Dashboard partagé en temps réel |
 
 ---
-
 ## 13. LIMITES
 
 - La définition des KPI doit impliquer les métiers — risque de désaccord
@@ -379,7 +366,6 @@ for nom, df in tables_export.items():
 > **KPI washing :** dérive qui consiste à mesurer beaucoup d'indicateurs pour donner une impression de pilotage rigoureux, sans que ces indicateurs n'entraînent de réelles décisions ou améliorations.
 
 ---
-
 ## 14. AMÉLIORATIONS
 
 - Connexion directe aux sources (API, SQL) — supprimer les fichiers CSV intermédiaires
@@ -391,7 +377,6 @@ for nom, df in tables_export.items():
 - Commentaires et annotations dans Power BI
 
 ---
-
 ## 15. ARCHITECTURE GITHUB
 
 ```
@@ -421,85 +406,6 @@ multi-kpi-reporting-dashboard/
 ```
 
 ---
-
-## 16. README GITHUB
-
-```markdown
-# Multi-KPI Reporting Dashboard
-## Pilotage de la performance opérationnelle par les indicateurs
-
-> **Auteur :** Emmanuel TSAGUE | **Cas :** générique et anonymisé | **Données :** simulées
-
-## Objectif
-Automatiser la consolidation de 15 KPI opérationnels dispersés dans plusieurs sources
-et les restituer dans un dashboard Power BI avec alertes configurables.
-
-## KPI couverts
-Délais, backlog, satisfaction, qualité, sécurité, disponibilité équipements, budget
-
-## Résultats (simulés)
-- Reporting : de 6 h à 20 min | 3 alertes critiques détectées
-
-## Avertissement
-Cas générique — aucune donnée réelle ou confidentielle d'organisation.
-```
-
----
-
-## 17. VERSION CV
-
-> Construction d'un reporting multi-KPI opérationnel : définition de 15 indicateurs métier, pipeline Python de consolidation multi-sources, moteur d'alertes configurables, dashboard Power BI interactif (délais, backlog, satisfaction, qualité, sécurité) — Python, pandas, Power BI.
-
----
-
-## 18. VERSION ENTRETIEN
-
-"J'ai construit un reporting multi-KPI opérationnel pour un contexte générique d'exploitation d'activité. Le problème : un manager produisait son reporting mensuel en 6 heures en copiant-collant des données de 8 fichiers Excel. J'ai structuré le projet en trois couches : d'abord, un atelier de définition des KPI avec les équipes métier pour s'assurer que tout le monde mesure la même chose ; ensuite, un pipeline Python qui consolide automatiquement les données sources et calcule les 15 indicateurs ; enfin, un dashboard Power BI avec des seuils d'alerte configurables. Le résultat simulé : reporting réduit à 20 minutes, 3 alertes critiques détectées automatiquement. La leçon principale : la définition précise de chaque KPI est plus difficile que le code — c'est l'étape qui demande le plus d'engagement des équipes."
-
----
-
-## 19. VERSION PORTFOLIO
-
-Ce projet démontre une compétence transversale essentielle : transformer des données dispersées en système de pilotage. La démarche est reproductible dans n'importe quel contexte opérationnel. La valeur ajoutée du Data Analyst n'est pas seulement technique (coder le pipeline) mais aussi métier (définir les bons indicateurs avec les équipes, configurer les seuils d'alerte, former les utilisateurs).
-
-**Transférabilité :** pilotage de maintenance industrielle (MTBF, MTTR, disponibilité), suivi de chantiers (avancement, délais, conformité), reporting réglementaire (taux de conformité, audits).
-
----
-
-## 20. POST LINKEDIN
-
-**6 heures de reporting manuel chaque mois. Est-ce vraiment inévitable ?**
-
-Dans beaucoup d'organisations, le reporting mensuel repose encore sur des copier-coller de fichiers Excel. Résultat : des heures de travail non productif et des indicateurs qui varient selon qui les calcule.
-
-J'ai construit un pipeline de reporting multi-KPI qui automatise cette tâche :
-
-- 15 indicateurs opérationnels consolidés depuis plusieurs sources
-- Calcul automatique : délais, backlog, satisfaction, qualité, disponibilité
-- Seuils d'alerte configurables avec détection automatique des dérives
-- Dashboard Power BI partageable en quelques clics
-
-Résultat simulé : de 6 heures à 20 minutes de reporting mensuel.
-
-La vraie valeur ? Pas le gain de temps — c'est la possibilité de détecter une dérive AVANT qu'elle devienne un problème.
-
-`#Reporting` `#PowerBI` `#KPI` `#DataAnalyst` `#Python` `#PerformanceOpérationnelle`
-
----
-
-## 21. QUESTIONS D'ENTRETIEN
-
-**Q : Comment définir un bon KPI ?**
-> Un bon KPI est SMART : Spécifique (mesure une chose précise), Mesurable (calculable objectivement), Actionnable (si mauvais, on sait quoi faire), Réaliste (atteignable), Temporel (mesuré à fréquence définie). La définition exacte du périmètre est critique : "taux de résolution dans les délais" doit préciser : quels tickets ? quels délais cibles ? comment traite-t-on les tickets annulés ?
-
-**Q : Comment gérer les sources de données hétérogènes ?**
-> Créer un layer d'abstraction : chaque source a un connecteur dédié (function Python) qui charge et normalise les données selon un schéma commun. Le pipeline de consolidation n'interagit qu'avec ce schéma commun. Cela isole les changements de format d'une source — seul son connecteur doit être mis à jour.
-
-**Q : Comment choisir les seuils d'alerte ?**
-> En collaboration avec les équipes métier : quelle valeur déclenche une action concrète ? Les seuils ne doivent pas être trop sensibles (trop de fausses alertes = ignorées) ni trop laxistes (alertes trop tardives = inutiles). On peut aussi calculer les percentiles historiques : seuil = P10 pour "alerte si en dessous des 10 % historiques".
-
----
-
 ## 22-23. COMPÉTENCES DÉMONTRÉES
 
 | Compétence | Preuve | Valeur | Phrase CV |
@@ -512,4 +418,22 @@ La vraie valeur ? Pas le gain de temps — c'est la possibilité de détecter un
 
 ---
 
-*Fin du document — Emmanuel TSAGUE — CAS 5 — Reporting Multi-KPIs*
+*Fin du document — TSAGUE EMMANUEL — CAS 5 — Reporting Multi-KPIs*
+---
+
+## Contact & Liens
+
+**TSAGUE EMMANUEL** - Data Scientist
+
+| | |
+|---|---|
+| Email | [emmatsague@yahoo.fr](mailto:emmatsague@yahoo.fr) |
+| GitHub | [github.com/TSAGUE25](https://github.com/TSAGUE25) |
+| Formation | Datascientest 2024 |
+| Experience | EDF MAD EDVANCE |
+| Domaines | Machine Learning - Data Analysis - Energie |
+
+---
+
+> Toutes les donnees de ce depot sont simulees et anonymisees.  
+> Aucune donnee reelle ou confidentielle n'est presente.
